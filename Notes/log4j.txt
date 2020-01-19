@@ -1,0 +1,36 @@
+Log4j is java based logging framework
+It is simple flexible, reliable and fast
+
+It is configured through configuration files like xml or properties
+
+It has three principal components
+
+1. Loggers
+2. Appenders
+3. Layout
+
+Loggers: It is responsible for logging information. To implement loggers into a project following steps need to be performed -
+
+Create an instance for logger class: Logger class is a Java-based utility that has got all the generic methods already implemented to use log4j
+
+Define the Log4j level: Primarily there are five kinds of log levels
+
+All - This level of logging will log everything ( it turns all the logs on )
+DEBUG – print the debugging information and is helpful in development stage
+INFO – print informational message that highlights the progress of the application
+WARN – print information regarding faulty and unexpected system behavior.
+ERROR – print error message that might allow system to continue
+FATAL – print system critical information which are causing the application to crash
+OFF – No logging
+
+Appenders: It is used to deliver LogEvents to their destination. It decides what will happen with log information. In simple words, it is used to write the logs in file. 
+
+Following are few types of Appenders
+
+ConsoleAppender: logs to standard output
+File appender: prints logs to some file
+Rolling file appender: to a file with maximum size
+Note: In log4j properties we can call appender with any name. There are other appenders as well but we will restrict to these few.
+
+
+Layouts: It is responsible for formatting logging information in different styles.

@@ -1,0 +1,54 @@
+Maven, meaning *accumulator of knowledge*,
+is a build automation tool for Java projects. 
+
+Let assume you have a java project which require certain jar files
+example
+  - Testng
+  - Selenium webdriver
+  - jenkins
+  - apache poi
+  - junit
+  - Log4j
+  - cucumber
+  
+  so that's a lot of jar file you have to download and manually add in build path of project
+  under AddLibrary section --> ooh lots of work to do
+  
+  Solution: -> Maven
+  
+  in maven all jar files are avaible in form of dependecny which is available at MAVEN repository
+  which is a Maven centrailised repository 
+  
+  So our maven project will send request to maven centrailized repository in form of dependency 
+  
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>6.8</version>
+      <scope>test</scope>
+    </dependency>
+    
+    an hidden directry known as .m2 will be created it will create all jar files and from this it
+    will be given to you.
+    
+    
+    Maven LifeCycle
+    
+    1. Maven Compile - compile all code and classes -> done by Maven compiler plugin
+    2. Maven Test -> run your unit tc, integration tc, functional tc -> done by Maven Surfire Plugin
+    3. Maven Resource -jar -> responsible for creation of resources - jar/war/ear -> done by Maven Resource Plugin
+
+
+Building a Maven Project
+To build a Maven project, we need to execute one of the life cycles by running one of their phases:
+
+
+mvn deploy
+This will execute the entire default lifecycle. Alternatively, we can stop at the install phase:
+
+
+mvn install
+But usually we'll use the command:
+
+
+mvn clean install

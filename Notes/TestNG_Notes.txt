@@ -1,0 +1,203 @@
+TestNG - unit testing framework also used by test automation engineers
+
+purpose of TestNG - is to desing Test Cases
+
+features of TestNG
+
+  ---> generate html reports
+  ---> different annotation
+  ---> priorities your TC
+  ---> make dependency b/w your Test Cases
+  ---> data Provider for your Test Cases
+  
+  
+  Install testng in eclipse
+  http://beust.com/eclipse/
+  
+  public class AnnotationPriorities 
+{
+	//pre condition --- starts wih Before or steps to take prior to exection of each test case
+   @BeforeSuite //1 ...
+   public void SuiteSetup()
+   {
+	   System.out.println("Suite SetUP");
+   }
+   
+   @BeforeTest //2 ..
+   public void launchBrowser()
+   {
+	   System.out.println("We launch browser");
+   }
+   @BeforeClass //3..
+   public void login()
+   {
+	   System.out.println("login to the app");
+   }
+   
+   @BeforeMethod //4..
+   public void enterURL()
+   {
+	   System.out.println("enter the url");
+   }
+   
+   @Test // 5..
+   public void googleTest()
+   {
+	   System.out.println("test something on the google");
+	   
+   }
+   
+   @Test // 5..
+   public void googlesearchTest()
+   {
+	   System.out.println("search something on the google");
+	   
+   }
+   @AfterMethod
+   public void logout()
+   {
+	   System.out.println("logout from google");
+	   
+   }
+   @AfterTest
+   public  void deleteAllCookies()
+   {
+	   System.out.println("deleted all cookies");
+   }
+   
+   @AfterClass
+   public void closeBrowser()
+   {
+	   System.out.println("close the browser after each TC");
+   }
+   
+   @AfterSuite
+   public void generateTestReport()
+   {
+	   System.out.println("generate test report");
+   }
+   
+   
+   O/p observe it
+   
+ Suite SetUP  -@beforesuitesetup
+We launch browser  @beforetest
+login to the app @beforeclass
+enter the url @beforemethod
+test something on the google // TC
+logout from google @aftermethod
+enter the url @beforemethod
+search something on the google . //TC
+logout from google @aftermethod
+close the browser after each TC @afterclass
+deleted all cookies //@aftertest
+
+
+When you are done with execution notice that a test-output folder is generated which will contain test report in html format
+test-output/index.html 
+
+
+Test Case Grouping
+‘Groups‘ is one more annotation of TestNG which can be used in the execution of multiple tests. Let’s say you have hundred tests of class vehicle and in it ten method of car, ten method of scooter and so on. You probably like to run all the scooter tests together in a batch. And you want all to be in a single test suite. With the help of grouping you can easily overcome this situation.
+
+public class Grouping {
+ 
+  @Test (groups = { "Car" })
+ 
+  public void Car1() {
+ 
+   System.out.println("Batch Car - Test car 1");
+ 
+  }
+ 
+  @Test (groups = { "Car" })
+ 
+  public void Car2() {
+ 
+   System.out.println("Batch Car - Test car 2");
+ 
+  }
+ 
+  @Test (groups = { "Scooter" })
+ 
+  public void Scooter1() {
+ 
+   System.out.println("Batch Scooter - Test scooter 1");
+ 
+  }
+ 
+  @Test (groups = { "Scooter" })
+ 
+  public void Scooter2() {
+ 
+   System.out.println("Batch Scooter - Test scooter 2");
+ 
+  }
+ 
+  @Test (groups = { "Car", "Sedan Car" })
+ 
+  public void Sedan1() {
+ 
+   System.out.println("Batch Sedan Car - Test sedan 1");
+ 
+  }
+ 
+ O/p will be
+ 
+ Batch Car - Test car 1
+Batch Car - Test car 2
+Batch Scooter - Test scooter 1
+Batch Scooter - Test scooter 2
+Batch Sedan Car - Test sedan 1
+PASSED: Car1
+PASSED: Car2
+PASSED: Scooter1
+PASSED: Scooter2
+PASSED: Sedan1
+
+this is also termed as batch exection.
+
+
+Dependent Test
+Sometimes, you may need to invoke methods in a Test case in a particular order or you want to share some data and state between methods. This kind of dependency is supported by TestNG as it supports the declaration of explicit dependencies between test methods.
+
+TestNG allows you to specify dependencies either with:
+
+Using attributes dependsOnMethods in @Test annotations OR
+Using attributes dependsOnGroups in @Test annotations.
+
+public class Dependent {
+ 
+  @Test (dependsOnMethods = { "OpenBrowser" })
+ 
+  public void SignIn() {
+ 
+   System.out.println("This will execute second (SignIn)");
+ 
+  }
+ 
+  @Test
+ 
+  public void OpenBrowser() {
+ 
+   System.out.println("This will execute first (Open Browser)");
+ 
+  }
+ 
+  @Test (dependsOnMethods = { "SignIn" })
+ 
+  public void LogOut() {
+ 
+   System.out.println("This will execute third (Log Out)");
+ 
+  }
+  
+  invocationCount, The number of times this method should be invoked. invocationTimeOut, The maximum number of milliseconds this test should take for the .
+  
+   @Test(invocationCount = 5, threadPoolSize = 2)
+    public void test1(){
+        int count= sequence.addAndGet(1);
+        System.out.println("Test Run Number  "+
+                count + " run by Thread  " + Thread.currentThread().getId());
+    }
+    

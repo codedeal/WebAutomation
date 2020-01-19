@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [shopingPortalTest]">
+  <listeners>
+    <listener class-name="com.listeners.ShopListener"/>
+  </listeners>
+  <test name="testngsmokeTest(failed)">
+    <classes>
+      <class name="com.testNGDemo.GroupingofTC">
+        <methods>
+          <include name="Scooter1"/>
+          <include name="setLogger"/>
+          <include name="Scooter2"/>
+          <include name="Sedan1"/>
+          <include name="Car1"/>
+          <include name="Car2"/>
+        </methods>
+      </class> <!-- com.testNGDemo.GroupingofTC -->
+    </classes>
+  </test> <!-- testngsmokeTest(failed) -->
+</suite> <!-- Failed suite [shopingPortalTest] -->

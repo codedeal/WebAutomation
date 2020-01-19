@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.smokesuite.HomePageTest">
+        <methods>
+          <include name="verifyHomePageTitleTest"/>
+          <include name="setUp"/>
+          <include name="verifythemessageofCustomBlock"/>
+          <include name="when_we_hover_women_we_should_be_able_to_select_dress"/>
+        </methods>
+      </class> <!-- com.smokesuite.HomePageTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,47 @@
+Site used
+
+Xpath=//tagname[@attribute='value']
+
+There are two types of XPath:
+
+1) Absolute XPath
+    example : html/body/div[1]/section/div[1]/div/div/div/div[1]/div/div/div/div/div[3]/div[1]/div/h4[1]/b
+2) Relative XPath
+   For Relative Xpath the path starts from the middle of the HTML DOM structure
+   Relative xpath: //*[@class='featured-box']//*[text()='Testing']
+   
+   Contains():
+Contains() is a method used in XPath expression. It is used when the value of any attribute changes dynamically
+Xpath=//*[contains(@type,'sub')] 
+Xpath=//*[contains(@id,'message')]
+
+Using OR & AND:
+Xpath=//*[@type='submit' or @name='btnReset']
+Xpath=//input[@type='submit' and @name='btnLogin']
+
+Text():
+In this expression, with text function, we find the element with exact text match as shown below. 
+In our case, we find the element with text "UserID".
+
+Following:
+Selects all elements in the document of the current node( ) 
+Xpath=//*[@type='text']//following::input
+
+Xpath=//td[text()='UserID']
+   
+https://www.instagram.com/
+
+//input[@name='fullName']
+
+//button[@type='submit']
+
+//a[text()='Log in'] -for  linking tags
+
+--- same with contains
+//a[contains(text(),'Log in')]
+
+flipkart.com
+
+//button/span[text()='Login']
+
+//span[contains(text(),'Enter Email/Mobile number')]
