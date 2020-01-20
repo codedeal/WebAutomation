@@ -12,7 +12,7 @@ import com.pages.ProductPage;
 
 public class HomePageTest extends TestBase
 {
-	 static Logger logger = Logger.getLogger(HomePageTest.class);
+	    Logger logger = Logger.getLogger(HomePageTest.class);
 		HomePage homePage;
 		ProductPage productPage;
 	

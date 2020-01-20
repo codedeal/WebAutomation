@@ -166,3 +166,39 @@
 2020-01-18 14:48:03 INFO  HomePageTest:22 - setup
 2020-01-18 14:48:11 INFO  HomePageTest:39 - som message
 2020-01-18 14:48:38 INFO  HomePageTest:22 - setup
+2020-01-19 11:26:02 INFO  Log:23 - Batch Car - Test car 1
+2020-01-19 11:26:29 INFO  Log:23 - Batch Car - Test car 2
+2020-01-19 11:26:30 INFO  Log:23 - Batch Scooter - Test scooter 1
+2020-01-19 11:26:31 INFO  Log:23 - Batch Scooter - Test scooter 2
+2020-01-19 11:26:33 INFO  Log:23 - Batch Sedan Car - Test sedan 1
+2020-01-19 11:26:34 INFO  HomePageTest:22 - setup
+2020-01-19 11:35:00 INFO  Log:23 - Batch Car - Test car 1
+2020-01-19 11:35:23 INFO  Log:23 - Batch Car - Test car 2
+2020-01-19 11:35:24 INFO  Log:23 - Batch Scooter - Test scooter 1
+2020-01-19 11:35:25 INFO  Log:23 - Batch Scooter - Test scooter 2
+2020-01-19 11:35:27 INFO  Log:23 - Batch Sedan Car - Test sedan 1
+2020-01-19 11:35:28 INFO  HomePageTest:22 - setup
+2020-01-19 11:36:52 INFO  Log:23 - Batch Car - Test car 1
+2020-01-19 11:37:07 INFO  Log:23 - Batch Car - Test car 2
+2020-01-19 11:37:08 INFO  Log:23 - Batch Scooter - Test scooter 1
+2020-01-19 11:37:10 INFO  Log:23 - Batch Scooter - Test scooter 2
+2020-01-19 11:37:11 INFO  Log:23 - Batch Sedan Car - Test sedan 1
+2020-01-19 11:37:12 INFO  HomePageTest:22 - setup
+2020-01-19 11:37:22 INFO  HomePageTest:48 - som message
+2020-01-19 11:37:23 INFO  HomePageTest:22 - setup
+2020-01-19 11:37:35 INFO  HomePageTest:39 - som message
+2020-01-19 11:37:39 INFO  HomePageTest:22 - setup
+2020-01-19 18:42:20 INFO  Log:23 - Batch Car - Test car 1
+2020-01-19 18:42:23 INFO  Log:23 - chrome driver created
+2020-01-19 18:42:31 INFO  Log:23 - Batch Car - Test car 2
+2020-01-19 18:42:32 INFO  Log:23 - Batch Scooter - Test scooter 1
+2020-01-19 18:42:33 INFO  Log:23 - Batch Scooter - Test scooter 2
+2020-01-19 18:42:34 INFO  Log:23 - Batch Sedan Car - Test sedan 1
+2020-01-19 18:42:35 INFO  HomePageTest:22 - setup
+2020-01-19 18:42:36 INFO  Log:23 - chrome driver created
+2020-01-19 18:42:43 INFO  HomePageTest:48 - som message
+2020-01-19 18:42:44 INFO  HomePageTest:22 - setup
+2020-01-19 18:42:45 INFO  Log:23 - chrome driver created
+2020-01-19 18:42:54 INFO  HomePageTest:39 - som message
+2020-01-19 18:42:57 INFO  HomePageTest:22 - setup
+2020-01-19 18:42:58 INFO  Log:23 - chrome driver created
